@@ -1230,7 +1230,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D50D94A70100DD942E /* ConfigFrameworkRelease.xcconfig */;
 			buildSettings = {
-				GCC_DEBUGGING_SYMBOLS = full;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -1244,6 +1247,9 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 				WARNING_CFLAGS = "-Wundeclared-selector";
 			};
 			name = Release;
@@ -1345,7 +1351,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D40D94A70100DD942E /* ConfigRelaunchRelease.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				LIBRARY_SEARCH_PATHS = "";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
